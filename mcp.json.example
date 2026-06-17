@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vscode-debug-bridge": {
+      "command": "npx",
+      "args": ["-y", "github:kevin1113-github/vscode-debug-bridge"],
+      "env": {
+        "DEBUG_BRIDGE_PORT": "39517"
+      }
+    }
+  }
+}

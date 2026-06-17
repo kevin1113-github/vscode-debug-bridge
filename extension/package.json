@@ -1,0 +1,40 @@
+{
+  "name": "vscode-debug-bridge",
+  "displayName": "VSCode Debug Bridge",
+  "description": "Exposes the active VSCode debug session over a local HTTP API so an AI agent (Claude Code / Codex / any MCP client) can drive step debugging for any DAP debugger (Unity vstuc, Python, Node, C++, ...).",
+  "version": "0.1.1",
+  "publisher": "kevin1113-github",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Debuggers",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "debugBridge.showStatus",
+        "title": "Debug Bridge: Show Status"
+      },
+      {
+        "command": "debugBridge.restart",
+        "title": "Debug Bridge: Restart HTTP Server"
+      }
+    ],
+    "configuration": {
+      "title": "Debug Bridge",
+      "properties": {
+        "debugBridge.port": {
+          "type": "number",
+          "default": 39517,
+          "description": "Localhost port the bridge HTTP server listens on. Use a distinct port per VSCode window if you debug multiple projects at once."
+        }
+      }
+    }
+  }
+}
