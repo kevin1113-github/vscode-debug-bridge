@@ -1,6 +1,6 @@
 {
   "name": "vscode-debug-bridge-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "MCP stdio server that lets any MCP client (Claude Code / Codex / ...) drive the VSCode debugger via the companion Debug Bridge extension. Debugger-agnostic (Unity vstuc, Python, Node, C++, ...).",
   "bin": {
