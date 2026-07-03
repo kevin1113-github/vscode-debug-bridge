@@ -1,5 +1,7 @@
 # VSCode Debug Bridge
 
+[English](README.md) | [한국어](README.ko.md)
+
 Lets any AI agent (Claude Code / Codex / Cline / any MCP client) **drive VSCode
 step debugging** — set breakpoints, attach, step, inspect the call stack, read
 variables, evaluate expressions — through MCP tool calls.
@@ -8,7 +10,7 @@ It is **debugger-agnostic**: it forwards to whatever debug adapter VSCode alread
 has active, so it works for Unity (`vstuc`), Python (`debugpy`), Node, C++
 (`cppdbg`), Go (`dlv`), etc. The bridge never reimplements a debug protocol.
 
-> 🇰🇷 한국어 사용법 / 개념 정리 / FAQ는 [`사용법.md`](사용법.md) 참고.
+> 🇰🇷 Korean README: [`README.ko.md`](README.ko.md). Unity-focused Korean usage guide / concepts / FAQ: [`사용법.md`](사용법.md).
 
 ```text
 Agent ──MCP(stdio)──> mcp/server.js ──HTTP(127.0.0.1:39517)──> extension ──vscode.debug──> active DAP session
